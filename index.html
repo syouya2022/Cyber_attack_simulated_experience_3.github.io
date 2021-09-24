@@ -5,38 +5,69 @@
 <head>
   <meta charset="UTF-8">
   <title>Mail_all</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href=".css">
   <script type="text/javascript">
     <!--
     //　イメージポップアップ表示
-    function ImageUp() {
+    function ImageUp1() {
       window.open("https://www.apple.com/jp/apple-watch-series-7", "window1", "width=800,height=1600,scrollbars=1");
-      
     }
-    //
-    -->
-  </script>
+
+    function ImageUp2() {
+      window.open("https://www.apple.com/jp/apple-watch-series-6/", "window1", "width=800,height=1600,scrollbars=1");
+    }
+    </script>
 
 </head>
 
 <body>
-  <div class="box">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
+
+  <div class="tabs">
+    <input id="all" type="radio" name="tab_item" checked>
+    <label class="tab_item" for="all">受信</label>
+    <input id="programming" type="radio" name="tab_item">
+    <label class="tab_item" for="programming">下書き</label>
+    <input id="design" type="radio" name="tab_item">
+    <label class="tab_item" for="design">送信済み</label>
+    <div class="tab_content" id="all_content">
+      <div class="tab_content_description">
+        <p class="c-txtsp">
+          <div class="Receive_box">
+            <div class="item">差出人：田中さん<br>件名：先日の賄賂について</br></div>
+            <div class="item">差出人：星さん<br>件名：先日の不祥事について</div>
+            <div class="item">差出人：里中さん<br>件名：先日の援交について</div>
+            <div class="item">差出人：飯野さん<br>件名：先日の浮気について</div>
+            <div class="item">差出人：ザビエルさん<br>件名：ユダヤ教の撲滅について</div>
+            <a class="item2" href="javascript:ImageUp1();">差出人：ティム・クックさん<br>件名：Apple Watch7について</a>
+            <a class="item2" href="javascript:ImageUp2();">差出人：ティム・クックさん<br>件名：Apple Watch6について</a>
+          </div>
+        </p>
+      </div>
+    </div>
+    <div class="tab_content" id="programming_content">
+      <div class="tab_content_description">
+        <p class="c-txtsp">
+          <div class="Draft_box">
+            <div class="item">
+              下書きはありません
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+    <div class="tab_content" id="design_content">
+      <div class="tab_content_description">
+        <p class="c-txtsp">
+          <div class="Out_box">
+            <div class="item">差出人：山崎さん<br>件名：Re:先日の不祥事について</div>
+            <div class="item">差出人：山崎さん<br>件名：Re:先日の援交について</div>
+            <div class="item">差出人：山崎さん<br>件名：Re:先日の浮気について</div>
+            <div class="item">差出人：山崎さん<br>件名：Re:ユダヤ教の撲滅について</div>
+            <a class="item2">差出人：山崎さん<br>件名：Re:Apple Watch7について</a>
+            <a class="item2">差出人：山崎さん<br>件名：Re:Apple Watch6について</a>
+          </div></p>
+      </div>
+    </div>
   </div>
 
-  <label>
-    <span>公立はこだて未来大学</span>
-    <input type="checkbox" name="checkbox">
-    <div id="popup"><img src="https://assets.techacademy.jp/public/logo.png" alt="TechAcademy" /></div>
-  </label>
-
-    <div class="box2">
-      <a href="javascript:ImageUp();">ここをクリック</a>
-    </div>
-
 </body>
-
