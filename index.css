@@ -1,14 +1,86 @@
-.box{
+.box {
   display: flex;
   flex-direction: column;
 }
 
-.box .item{
+.box .item {
   padding: 15px;
   background: #43A1AC;
-  color: #FFF;
+  color: #1A0DAB;
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.box2{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: #43A1AC;
+  color: red;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+ text-decoration: none;
+}
+.box2 .a{
+  color: red;
+}
+
+.a{
+  color: red;
+}
+
+#popup {
+  width: 30%;
+  line-height: 100px;
+  background: #000;
+  padding: 0 4%;
+  box-sizing: border-box;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+img {
+
+  width: 100%;
+
+}
+
+label {
+
+  display: flex;
+  flex-direction: column;
+}
+
+label span {
+  padding: 15px;
+  background: #43A1AC;
+  color: #001BA0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+label span:hover {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked+#popup {
+  display: block;
+  transition: .2s;
 }
