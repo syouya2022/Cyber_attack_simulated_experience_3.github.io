@@ -1,9 +1,11 @@
-.box {
+/*メール受信ボックスの全体設定*/
+.Receive_box {
   display: flex;
   flex-direction: column;
 }
 
-.box .item {
+/*メール受信ボックスのurlがない(サブ)の設定*/
+.Receive_box .item {
   padding: 15px;
   background: #43A1AC;
   color: #1A0DAB;
@@ -13,74 +15,102 @@
   font-weight: bold;
 }
 
-.box2{
-  display: flex;
-  flex-direction: column;
+/*メール受信ボックスのurlがある(メイン)の設定*/
+.Receive_box .item2 {
   padding: 15px;
   background: #43A1AC;
-  color: red;
+  color: #1A0DAB;
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
-  color: red;
- text-decoration: none;
-}
-.box2 .a{
-  color: red;
 }
 
-.a{
-  color: red;
-}
-
-#popup {
-  width: 30%;
-  line-height: 100px;
-  background: #000;
-  padding: 0 4%;
-  box-sizing: border-box;
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-}
-
-img {
-
-  width: 100%;
-
-}
-
-label {
-
+/*メール受信ボックスの全体設定*/
+.Out_box {
   display: flex;
   flex-direction: column;
 }
 
-label span {
+/*メール受信ボックスのurlがない(サブ)の設定*/
+.Out_box .item {
   padding: 15px;
   background: #43A1AC;
-  color: #001BA0;
+  color: #1A0DAB;
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
-
 }
 
-label span:hover {
-  cursor: pointer;
+/*メール受信ボックスのurlがある(メイン)の設定*/
+.Out_box .item2 {
+  padding: 15px;
+  background: #43A1AC;
+  color: #1A0DAB;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-input[type="checkbox"] {
-  display: none;
+.Draft_box .item{
+  text-align:center
 }
 
-input[type="checkbox"]:checked+#popup {
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/3);
+  height: 50px;
+  border-bottom: 3px solid #5ab4bd;
+  background-color: #d9d9d9;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
   display: block;
-  transition: .2s;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked~#all_content,
+#programming:checked~#programming_content,
+#design:checked~#design_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked+.tab_item {
+  background-color: #5ab4bd;
+  color: #fff;
 }
