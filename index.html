@@ -2,18 +2,45 @@
 <html>
 <html lang="ja">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>Mail_all</title>
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<div class="box">
-			<div class="item">山崎</div>
-			<div class="item">アマゾン・ジャパン</div>
-			<div class="item">Apple</div>
-			<div class="item">公立はこだて未来大学事務局</div>
-			<div class="item">北朝鮮</div>
-		</div>
-	</body>
-	<!--//box-->
+<head>
+  <meta charset="UTF-8">
+  <title>Mail_all</title>
+  <link rel="stylesheet" href="Mail_all.css">
+  <script type="text/javascript">
+    <!--
+    //　イメージポップアップ表示
+    function ImageUp() {
+      window.open("https://www.apple.com/jp/apple-watch-series-7", "window1", "width=800,height=1600,scrollbars=1");
+      
+    }
+    //
+    -->
+  </script>
+
+</head>
+
+<body>
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+
+  <label>
+    <span>公立はこだて未来大学</span>
+    <input type="checkbox" name="checkbox">
+    <div id="popup"><img src="https://assets.techacademy.jp/public/logo.png" alt="TechAcademy" /></div>
+  </label>
+
+  <label>
+    <span></span>
+    <input type="checkbox" name="checkbox">
+
+    <div class="box2">
+      <a href="javascript:ImageUp();">ここをクリック</a>
+    </div>
+
+</body>
+
